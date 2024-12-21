@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RVMF - Home</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    .triangle-container {
+      position: relative;
+      width: 300px;
+      height: 260px;
+    }
+
+    .triangle {
+      width: 0;
+      height: 0;
+      border-left: 150px solid transparent;
+      border-right: 150px solid transparent;
+      border-bottom: 260px solid #444;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .triangle-container .vertex {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      background-color: rgba(255, 255, 255, 0.8);
+      border: 2px solid #333;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 0.9rem;
+      font-weight: bold;
+      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
+      color: #333;
+      transition: transform 0.2s, background-color 0.3s;
+    }
+
+    .triangle-container .vertex:hover {
+      background-color: #00bcd4;
+      color: #fff;
+      transform: scale(1.1);
+    }
+
+    .triangle-container .vertex.engineering {
+      top: -70px;
+      left: 100px;
+    }
+
+    .triangle-container .vertex.music {
+      bottom: -70px;
+      left: -30px;
+    }
+
+    .triangle-container .vertex.kungfu {
+      bottom: -70px;
+      right: -30px;
+    }
+
+    .triangle-container .center-label {
+      position: absolute;
+      top: 130px; /* Precisão ajustada para centralizar no triângulo */
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #fff;
+      text-align: center;
+      cursor: pointer;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .triangle-container .center-label:hover {
+      color: #00ff00; /* Fica verde ao passar o mouse */
+    }
+  </style>
+</head>
+<body>
+  <div class="triangle-container">
+    <div class="triangle"></div>
+    <a href="engineering.html" class="vertex engineering">Engineering</a>
+    <a href="music.html" class="vertex music">Music</a>
+    <a href="kungfu.html" class="vertex kungfu">Kung-fu</a>
+    <a href="about.html" class="center-label">RVMF</a>
+  </div>
+</body>
+</html>
