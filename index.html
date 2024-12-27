@@ -28,9 +28,9 @@
       height: 0;
       border-left: 150px solid transparent;
       border-right: 150px solid transparent;
-      border-bottom: 260px solid #444;
+      border-top: 260px solid #444;
       position: absolute;
-      top: 0;
+      bottom: 0;
       left: 0;
     }
 
@@ -61,22 +61,23 @@
 
     .triangle-container .vertex.engineering {
       top: -70px;
-      left: 100px;
+      left: -50px;
     }
 
     .triangle-container .vertex.music {
-      bottom: -70px;
-      left: -30px;
+      top: -70px;
+      right: -50px;
     }
 
     .triangle-container .vertex.kungfu {
-      bottom: -70px;
-      right: -30px;
+      bottom: -65px; /* Alinha com o vértice inferior */
+      left: 50%; /* Centraliza horizontalmente */
+      transform: translateX(-50%); /* Corrige deslocamento para o centro */
     }
 
     .triangle-container .center-label {
       position: absolute;
-      top: 130px; /* Precisão ajustada para centralizar no triângulo */
+      bottom: 130px;
       left: 50%;
       transform: translateX(-50%);
       font-size: 1.5rem;
